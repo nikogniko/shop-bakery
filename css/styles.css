@@ -1,3 +1,41 @@
+/* Fonts */
+
+/* poppins-300 */
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-weight: 300;
+  src: url('../fonts/poppins-v22-latin-300.woff2') format('woff2');
+}
+/* poppins-regular */
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-weight: 400;
+  src: url('../fonts/poppins-v22-latin-regular.woff2') format('woff2');
+}
+/* poppins-600 */
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-weight: 600;
+  src: url('../fonts/poppins-v22-latin-600.woff2') format('woff2');
+}
+/* poppins-700 */
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-weight: 700;
+  src: url('../fonts/poppins-v22-latin-700.woff2') format('woff2');
+}
+/* poppins-900 */
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-weight: 900;
+  src: url('../fonts/poppins-v22-latin-900.woff2') format('woff2');
+}
+
 /* Base */
 :root {
   --color-primary-dark: #31261a;
@@ -9,10 +47,12 @@
 }
 
 body {
-  background-color: var(--color-primary-light);
+  /* background-color: var(--color-primary-light); */
 
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
   color: var(--color-primary-dark);
 }
 
@@ -22,6 +62,10 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+address {
+  font-style: normal;
 }
 
 /* Buttons */
@@ -47,7 +91,6 @@ a {
 
 /* Navigation */
 .nav-link {
-  font-size: 18px;
   text-align: center;
   color: var(--color-primary-light);
 }
@@ -61,18 +104,11 @@ a {
 .section-title {
   font-weight: 900;
   font-size: 64px;
-  /* line-height: 84px; */
   line-height: 131%;
 }
 
 .section-title .accent {
   color: var(--color-accent-dark);
-}
-
-h3 {
-  font-weight: 600;
-  font-size: 40px;
-  color: var(--color-primary-dark);
 }
 
 /* Hero section*/
@@ -81,17 +117,85 @@ h3 {
   font-size: 128px;
   text-align: center;
   color: var(--color-primary-light);
+  line-height: normal;
 }
 
 .hero-title .accent {
   color: var(--color-accent-light);
 }
 
-/* Advantages section */
+/* Traditions section */
 .advantages-list {
   background-color: var(--color-accent-light);
   color: var(--color-primary-light);
 
   font-weight: 300;
   font-size: 20px;
+}
+
+.traditions-text span {
+  font-weight: 600;
+  color: var(--color-accent-light);
+}
+
+.traditions-text .uppercase {
+  text-transform: uppercase;
+}
+
+/* Chefs section */
+.chef-title {
+  font-weight: 600;
+  font-size: 40px;
+  color: var(--color-primary-dark);
+}
+
+.chef-description {
+}
+
+/* Formats section */
+
+.format-card {
+  color: var(--color-primary-light);
+}
+
+.format-title {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.format-description {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+/* Join section */
+.join-text {
+  color: var(--color-accent-dark);
+}
+
+/* Footer */
+
+.contacts {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.contacts-link {
+  color: var(--color-primary-light);
+}
+
+.contacts-link:hover {
+  color: var(--color-accent-light);
+}
+
+.policy {
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--color-primary-light);
+}
+
+.policy-copyright {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--color-secondary-dark);
 }
