@@ -36,6 +36,10 @@
   src: url('../fonts/poppins-v22-latin-900.woff2') format('woff2');
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* Base */
 :root {
   --color-primary-dark: #31261a;
@@ -54,6 +58,18 @@ body {
   font-size: 18px;
   line-height: 150%;
   color: var(--color-primary-dark);
+
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
 }
 
 ul {
@@ -67,6 +83,23 @@ a {
 address {
   font-style: normal;
 }
+
+/* Hides elements */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Utils */
 
 /* Buttons */
 
@@ -89,6 +122,34 @@ address {
   color: var(--color-accent-dark);
 }
 
+/* Sections */
+
+.section {
+  padding: 48px 0;
+}
+
+.section:last-child {
+  padding-bottom: 96px;
+}
+
+.section-title {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 131%;
+}
+
+.section-title .accent {
+  color: var(--color-accent-dark);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 /* Navigation */
 .nav-link {
   text-align: center;
@@ -100,37 +161,36 @@ address {
   color: var(--color-accent-light);
 }
 
-/* Sections */
-.section-title {
-  font-weight: 900;
-  font-size: 64px;
-  line-height: 131%;
-}
-
-.section-title .accent {
-  color: var(--color-accent-dark);
-}
-
 /* Hero section*/
 .hero-title {
+  margin: 272px auto;
   font-weight: 900;
   font-size: 128px;
   text-align: center;
-  color: var(--color-primary-light);
   line-height: normal;
+  color: var(--color-primary-light);
 }
 
 .hero-title .accent {
   color: var(--color-accent-light);
 }
 
-/* Traditions section */
+/* Advantages section */
 .advantages-list {
   background-color: var(--color-accent-light);
   color: var(--color-primary-light);
 
   font-weight: 300;
   font-size: 20px;
+}
+
+/* Traditions section */
+.traditions-section {
+  padding-top: 96px;
+}
+
+.traditions-title {
+  margin-bottom: 42px;
 }
 
 .traditions-text span {
@@ -143,16 +203,25 @@ address {
 }
 
 /* Chefs section */
+.chefs-title {
+  margin-bottom: 80px;
+}
+
 .chef-title {
   font-weight: 600;
   font-size: 40px;
   color: var(--color-primary-dark);
+
+  margin-bottom: 16px;
 }
 
 .chef-description {
 }
 
 /* Formats section */
+.formats-title {
+  margin-bottom: 80px;
+}
 
 .format-card {
   color: var(--color-primary-light);
@@ -169,6 +238,10 @@ address {
 }
 
 /* Join section */
+.join-title {
+  margin-bottom: 16px;
+}
+
 .join-text {
   color: var(--color-accent-dark);
 }
