@@ -43,7 +43,7 @@
     </header>
 
     <main>
-      <section>
+      <section class="hero-section">
         <div class="container">
           <h1 class="hero-title">
             <span class="accent">Cучасна</span> пекарня
@@ -88,6 +88,7 @@
                 type="image/webp"
               />
               <img
+                class="traditions-image"
                 src="./images/baker-with-loaves.jpg"
                 alt="Пекар стоїть з батонами"
               />
@@ -98,7 +99,7 @@
 
       <section class="section" id="chefs-section">
         <div class="container">
-          <h2 class="chefs-title section-title">
+          <h2 class="chefs-title section-title centered">
             Наші найкращі <span class="accent">шеф-кухарі</span>
           </h2>
           <ul class="chefs-list">
@@ -106,7 +107,11 @@
               <article class="chef-card">
                 <picture>
                   <source srcset="./images/chef-1.webp" type="image/webp" />
-                  <img src="./images/chef-1.jpg" alt="Перший шеф" />
+                  <img
+                    class="chef-image"
+                    src="./images/chef-1.jpg"
+                    alt="Перший шеф"
+                  />
                 </picture>
 
                 <div class="chef-info limited">
@@ -123,7 +128,11 @@
               <article class="chef-card">
                 <picture>
                   <source srcset="./images/chef-2.webp" type="image/webp" />
-                  <img src="./images/chef-2.jpg" alt="Другий шеф" />
+                  <img
+                    class="chef-image"
+                    src="./images/chef-2.jpg"
+                    alt="Другий шеф"
+                  />
                 </picture>
 
                 <div class="chef-info">
@@ -146,7 +155,7 @@
 
       <section class="section" id="formats-section">
         <div class="container">
-          <h2 class="formats-title section-title">Формати</h2>
+          <h2 class="formats-title section-title centered">Формати</h2>
 
           <ul class="formats-list">
             <li class="formats-item">
@@ -197,6 +206,14 @@
                 Приєднуйся до мережі пекарень
               </h2>
               <p class="join-text">Заповни форму, щоб ми звʼязались з тобою!</p>
+
+              <div class="centered">
+                <button class="button" type="submit">Замовити дзвінок</button>
+                <p class="button-caption">
+                  Натискаючи на кнопку я погоджуюсь
+                  <a href="./index.html">з політикою конфіденційності</a>
+                </p>
+              </div>
             </div>
 
             <div>
@@ -214,7 +231,7 @@
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="footer-section">
       <div class="container">
         <div class="footer-container">
           <nav class="footer-nav" aria-label="Панель навігації">
