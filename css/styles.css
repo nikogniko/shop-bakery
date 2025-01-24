@@ -234,7 +234,7 @@ img {
       rgba(18, 18, 17, 0) 100%
     ),
     image-set(
-      url('../images/hero-image.webp') type('image/webp'),
+      /* url('../images/hero-image.webp') type('image/webp'), */
       url('../images/hero-image.jpg') type('image/jpeg')
     );
   background-repeat: no-repeat;
@@ -380,8 +380,8 @@ img {
 }
 
 .formats-item {
-  max-width: 350px;
-  /* flex-basis: calc((100%-40px) / 3); */
+  /* max-width: 350px; */
+  flex-basis: calc((100% - 40px) / 3);
 }
 
 .format-card {
@@ -452,10 +452,9 @@ img {
 
 .map {
   flex-shrink: 0;
+  flex-basis: calc(50% - 32px);
   border: none;
   border-radius: 16px;
-
-  width: 500px;
 }
 
 .join-title {
@@ -478,8 +477,7 @@ img {
 .footer-container {
   display: flex;
   padding: 32px 0;
-  gap: 20px;
-  /* justify-content: space-between; */
+  gap: 60px;
 }
 
 .footer-nav,
@@ -491,13 +489,16 @@ img {
 }
 
 .footer-logo,
-.nav-menu,
-.address-list,
-.address-policy {
+.footer-menu,
+.address-list{
   flex-grow: 1;
 }
 
-.nav-menu,
+.address-policy {
+  flex-grow: 0;
+}
+
+.footer-menu,
 .address-list {
   display: flex;
   gap: 16px;
@@ -516,6 +517,11 @@ img {
 
 .address-link:hover {
   color: var(--color-accent-normal);
+}
+
+.contacts-list {
+  display: flex;
+  gap: 22px;
 }
 
 .contacts-icon {
@@ -537,4 +543,5 @@ img {
   font-weight: 400;
   font-size: 14px;
   color: var(--color-secondary-dark);
+  margin-bottom: 0;
 }
