@@ -131,7 +131,7 @@ img {
 
 .button:hover,
 .button:focus {
-  background-color: transparent;
+  background-color: var(--color-primary-light);
   color: var(--color-accent-dark);
 }
 
@@ -581,4 +581,40 @@ img {
   font-size: 14px;
   color: var(--color-secondary-dark);
   margin-bottom: 0;
+}
+
+/* Modal */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(49, 38, 26, 0.4);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: relative;
+  width: 880px;
+  height: 880px;
+  background-color: var(--color-primary-light);
+  border-radius: 32px;
+}
+
+.modal-btn-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 32px;
+  height: 32px;
 }
