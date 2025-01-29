@@ -235,7 +235,7 @@ img {
     ),
     image-set(
       /* url('../images/hero-image.webp') type('image/webp'), */
-      url('../images/hero-image.jpg') type('image/jpeg')
+        url('../images/hero-image.jpg') type('image/jpeg')
     );
   background-repeat: no-repeat;
   background-size: cover;
@@ -305,16 +305,29 @@ img {
 
 /* Chefs section */
 .chefs-title {
-  max-width: 532px;
+  /* max-width: 532px; */
+  position: relative;
   margin: 0 auto 80px;
 }
 
 .chefs-title::before,
 .chefs-title::after {
   content: '';
-  display: block;
+  position: absolute;
+  bottom: 24px;
+  /* display: block;  - You don't need to define it explicitly,
+                as an element automatically becomes block-level 
+                due to position: absolute. */
   width: 352px;
   border: 2px solid var(--color-accent-light);
+}
+
+.chefs-title::before {
+  left: 0;
+}
+
+.chefs-title::after {
+  right: 0;
 }
 
 .chefs-list {
@@ -466,12 +479,36 @@ img {
 }
 
 /* Footer */
+
 .footer-section {
+  position: relative;
   background-color: var(--color-primary-dark);
   background-image: url('../images/footer-bg-image.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.footer-section::before,
+.footer-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  background-repeat: no-repeat;
+}
+
+.footer-section::before {
+  left: 0;
+  width: 150px;
+  height: 120px;
+  background-image: url(../images/footer-desktop-bread-1.png);
+}
+
+.footer-section::after {
+  right: 0;
+  width: 380px;
+  height: 188px;
+  background-image: url(../images/footer-desktop-bread-2.png);
 }
 
 .footer-container {
@@ -490,7 +527,7 @@ img {
 
 .footer-logo,
 .footer-menu,
-.address-list{
+.address-list {
   flex-grow: 1;
 }
 
